@@ -88,7 +88,7 @@
 
       colorscheme base16-atelierforest
     else
-      colorscheme default
+      colorscheme 0x7A69_dark
     endif
 " }
 
@@ -101,10 +101,23 @@
     set laststatus=2
     let g:airline#extensions#tabline#enabled = 1
     let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='light'
+    let g:airline#extensions#tmuxline#enabled = 1
+    let g:airline_theme='cobalt2'
+    cmap at AirlineTheme 
 " }
 
+" Tmuxline {
+  let g:tmuxline_preset = {
+      \'a'       : '#S',
+      \'win'     : '#I  #W#F',
+      \'cwin'    : '#I  #W#F',
+      \'y'       : '%F  %l:%M %p',
+      \'z'       : '#H',
+      \'options' : {'status-justify' : 'left'}
+	\}
+
+  let g:tmuxline_preset = 'default'
+" }
 " Tabular {
     cnoremap tb Tabularize<Space>/
 " }
