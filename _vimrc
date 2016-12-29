@@ -23,6 +23,8 @@
     set foldmethod=indent
     set nobackup
 
+    colorscheme Chasing_Logic
+
     " Defining leader keys
     let mapleader = ','
     let maplocalleader = '\'
@@ -85,10 +87,8 @@
       elseif has("gui_win32")
         set guifont=DejaVu_Sans_Mono_for_Powerline:h10,Consolas:h11,Courier:h10,Courier_New:h10,Andale_Mono:h10,Menlo:h10
       endif
-
-      colorscheme base16-atelierforest
     else
-      colorscheme 0x7A69_dark
+
     endif
 " }
 
@@ -118,8 +118,13 @@
 
   let g:tmuxline_preset = 'default'
 " }
+
 " Tabular {
     cnoremap tb Tabularize<Space>/
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR>
 " }
 
 " CtrlP {
