@@ -53,6 +53,9 @@
     nnoremap bn :bn<CR> " next buffer
     nnoremap bp :bp<CR> " previous buffer
     nnoremap bd :bd<CR> " close buffer
+
+    " Windows navigation
+    nnoremap <tab> <c-w><c-w>
 " }
 
 
