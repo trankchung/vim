@@ -110,16 +110,16 @@
 " }
 
 " Tmuxline {
-  let g:tmuxline_preset = {
-      \'a'       : '#S',
-      \'win'     : '#I  #W#F',
-      \'cwin'    : '#I  #W#F',
-      \'y'       : '%F  %l:%M %p',
-      \'z'       : '#H',
-      \'options' : {'status-justify' : 'left'}
-	\}
+    let g:tmuxline_preset = {
+        \'a'       : '#S',
+        \'win'     : '#I  #W#F',
+        \'cwin'    : '#I  #W#F',
+        \'y'       : '%F  %l:%M %p',
+        \'z'       : '#H',
+        \'options' : {'status-justify' : 'left'}
+    \}
 
-  let g:tmuxline_preset = 'default'
+    let g:tmuxline_preset = 'default'
 " }
 
 " Tabular {
