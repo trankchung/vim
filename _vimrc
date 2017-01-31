@@ -66,7 +66,7 @@
     nnoremap <F2> :NERDTree $HOME<CR>
     nnoremap <leader>n :NERDTreeToggle<CR>
     nnoremap <leader>t :NERDTreeToggle<CR>
-    cnoremap nt NERDTree<Space>
+    " cnoremap nt NERDTree<Space>
 " }
 
 
@@ -106,7 +106,7 @@
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
     let g:airline_theme='dark'
-    cmap at AirlineTheme 
+    " cnoremap at AirlineTheme 
 " }
 
 " Tmuxline {
@@ -123,7 +123,7 @@
 " }
 
 " Tabular {
-    cnoremap tb Tabularize<Space>/
+    " cnoremap tb Tabularize<Space>/
     nmap <Leader>a= :Tabularize /=<CR>
     vmap <Leader>a= :Tabularize /=<CR>
     nmap <Leader>a: :Tabularize /:<CR>
@@ -132,7 +132,7 @@
 
 " CtrlP {
     let g:ctrlp_working_path_mode = 'ra'
-    cnoremap cp CtrlP 
+    " cnoremap cp CtrlP 
     nnoremap <leader>f :CtrlP<CR>
 " }
 
