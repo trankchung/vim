@@ -20,7 +20,6 @@
     set backspace=indent,eol,start
     set linespace=0
     set showmatch
-    set foldmethod=indent
     set nobackup
 
     colorscheme abra
@@ -34,7 +33,7 @@
     inoremap <Esc> <Nop>
     cnoremap <Esc> <Nop>
     
-    " Map jk to Ctrl+C, same as Escape
+    " Map to Ctrl+C, same as Escape
     noremap <leader>c <C-C>
     inoremap <leader>c <C-C>
     cnoremap <leader>c <C-C>
@@ -56,6 +55,9 @@
 
     " Windows navigation
     nnoremap <tab> <c-w><c-w>
+    
+    " Folding
+    nnoremap <leader>fi :setlocal fdm=indent<CR>
 " }
 
 
