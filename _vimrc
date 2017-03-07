@@ -139,3 +139,7 @@
     nnoremap <leader>d <C-D> " Page down using <leader>d instead of Ctrl+D.
     nnoremap <leader>u <C-U> " Page up using <leader>u instead of Ctrl+U.
 " }
+
+" JSON Line Format {
+    nnoremap <leader>fj :python json_line_format_write()<CR>
+" }
