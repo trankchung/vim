@@ -21,6 +21,7 @@
     set linespace=0
     set showmatch
     set nobackup
+    set t_Co=256
 
     colorscheme abra
 
