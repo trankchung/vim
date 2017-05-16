@@ -23,7 +23,7 @@
     set nobackup
     set t_Co=256
 
-    colorscheme abra
+    colorscheme tomorrow
 
     " Defining leader keys
     let mapleader = ','
@@ -107,7 +107,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='dark'
+    let g:airline_theme='papercolor'
     " cnoremap at AirlineTheme 
 " }
 
