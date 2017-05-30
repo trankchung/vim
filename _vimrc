@@ -23,7 +23,7 @@
     set nobackup
     set t_Co=256
 
-    colorscheme tomorrow
+    colorscheme Tomorrow
 
     " Defining leader keys
     let mapleader = ','
