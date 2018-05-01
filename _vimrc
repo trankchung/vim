@@ -110,12 +110,12 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='aurora'
+    let g:airline_theme='alduin'
     " cnoremap at AirlineTheme 
 " }
 
 " Tmuxline {
-    let g:tmuxline_preset = 'default'
+    let g:tmuxline_preset = 'powerline'
 " }
 
 " Tabular {
