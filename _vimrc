@@ -1,5 +1,6 @@
 " Pathongen {
     execute pathogen#infect()
+    execute pathogen#helptags()
 " }
 
 " Common {
