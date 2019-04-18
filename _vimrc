@@ -147,3 +147,8 @@
 " JSON Line Format {
     nnoremap <leader>fj :python json_line_format_write()<CR>
 " }
+ 
+" Groovy syntax highlighting {
+    au BufRead,BufNewFile bootstrap set syntax=groovy
+    au BufRead,BufNewFile Jenkinsfile set syntax=groovy
+" }
