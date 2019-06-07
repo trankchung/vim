@@ -23,6 +23,7 @@
     set showmatch
     set nobackup
     set t_Co=256
+    set t_BE=
 
     colorscheme monokain
 
