@@ -197,8 +197,7 @@ if &t_Co > 255
 	hi Underlined      ctermfg=244               cterm=underline
 
 	hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
-	hi VisualNOS                   ctermbg=144
-	hi Visual                      ctermbg=144
+  hi Visual	gui=none guifg=khaki guibg=olivedrab
 	hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
 	hi WildMenu        ctermfg=81  ctermbg=16
 
