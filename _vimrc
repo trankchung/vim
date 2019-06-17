@@ -25,7 +25,7 @@
     set t_Co=256
     set t_BE=
 
-    colorscheme monokain
+    colorscheme Tomorrow
 
     " Defining leader keys
     let mapleader = ','
@@ -65,8 +65,9 @@
 
 
 " NERDTree {
-    let NERDTreeDirArrows = 0
+    let NERDTreeDirArrows = 1
     let NERDTreeIgnore = ['__pycache__']
+    let NERDTreeWinSize = 40
 
     nnoremap <F2> :NERDTree $HOME<CR>
     nnoremap <leader>n :NERDTreeToggle<CR>
@@ -112,7 +113,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='alduin'
+    let g:airline_theme='aurora'
     " cnoremap at AirlineTheme 
 " }
 
