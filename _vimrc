@@ -25,7 +25,7 @@
     set t_Co=256
     set t_BE=
 
-    colorscheme Tomorrow
+    colorscheme monokain
 
     " Defining leader keys
     let mapleader = ','
@@ -113,7 +113,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='aurora'
+    let g:airline_theme='cool'
     " cnoremap at AirlineTheme 
 " }
 
