@@ -112,8 +112,8 @@
     set laststatus=2
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tmuxline#enabled = 1
-    let g:airline_theme='distinguished'
+    let g:airline#extensions#tmuxline#enabled = 0
+    let g:airline_theme='cool'
     " cnoremap at AirlineTheme 
 " }
 
