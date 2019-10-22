@@ -25,7 +25,8 @@
     set t_Co=256
     set t_BE=
 
-    colorscheme monokain
+    let ayucolor="light"
+    colorscheme fruidle
 
     " Defining leader keys
     let mapleader = ','
@@ -113,7 +114,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='cool'
+    let g:airline_theme='tomorrow'
     " cnoremap at AirlineTheme 
 " }
 
@@ -150,8 +151,9 @@
     nnoremap <leader>fj :python json_line_format_write()<CR>
 " }
  
-" Custom syntax highlighting {
+" Groovy syntax highlighting {
     au BufRead,BufNewFile bootstrap set syntax=groovy
     au BufRead,BufNewFile Jenkinsfile set syntax=groovy
     au BufRead,BufNewFile Controlfile set syntax=yaml
 " }
+
