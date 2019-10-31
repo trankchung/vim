@@ -29,7 +29,7 @@ hi Question     gui=NONE guifg=#ff7700 guibg=NONE
 " Split area
 hi StatusLine   gui=BOLD guifg=#f8f8f8 guibg=#404040
 hi StatusLineNC gui=NONE guifg=#a4a4a4 guibg=#404040
-hi VertSplit    gui=NONE guifg=#f8f8f8 guibg=#404040
+hi VertSplit    gui=NONE guifg=#f8f8f8 guibg=NONE
 hi WildMenu     gui=BOLD guifg=#f8f8f8 guibg=#dd0000
 
 " Diff
@@ -50,7 +50,7 @@ hi FoldColumn   gui=NONE guifg=#40a098 guibg=#f0f0f0
 " Other
 hi Directory    gui=NONE guifg=#0070b8 guibg=NONE
 hi LineNr       gui=NONE guifg=#acacac guibg=NONE
-hi NonText      gui=BOLD guifg=#00a0c0 guibg=#ececec
+hi NonText      gui=BOLD guifg=#f8f8f8 guibg=NONE
 hi SpecialKey   gui=NONE guifg=#4040ff guibg=NONE
 hi Title        gui=NONE guifg=#0050a0 guibg=#c0e8ff
 hi Visual       gui=NONE guifg=#484848 guibg=#e0e0e0

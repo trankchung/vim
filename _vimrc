@@ -68,7 +68,7 @@
 " NERDTree {
     let NERDTreeDirArrows = 1
     let NERDTreeIgnore = ['__pycache__']
-    let NERDTreeWinSize = 40
+    let NERDTreeWinSize = 25
 
     nnoremap <F2> :NERDTree $HOME<CR>
     nnoremap <leader>n :NERDTreeToggle<CR>
