@@ -25,8 +25,8 @@
     set t_Co=256
     set t_BE=
 
-    let ayucolor="light"
-    colorscheme fruidle
+    let ayucolor="dark"
+    colorscheme ayu
 
     " Defining leader keys
     let mapleader = ','
