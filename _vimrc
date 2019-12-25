@@ -34,8 +34,8 @@
 
     " Disable Escape key
     " noremap <Esc> <Nop>
-    inoremap <Esc> <Nop>
-    cnoremap <Esc> <Nop>
+    " inoremap <Esc> <Nop>
+    " cnoremap <Esc> <Nop>
     
     " Map to Ctrl+C, same as Escape
     noremap <leader>c <C-C>
@@ -153,7 +153,8 @@
  
 " Groovy syntax highlighting {
     au BufRead,BufNewFile bootstrap set syntax=groovy
-    au BufRead,BufNewFile Jenkinsfile set syntax=groovy
     au BufRead,BufNewFile Controlfile set syntax=yaml
+    au BufRead,BufNewFile Jenkinsfile set syntax=groovy
+    au BufRead,BufNewFile Releasefile set syntax=groovy
 " }
 
