@@ -113,13 +113,23 @@
     set laststatus=2
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='tomorrow'
+    let g:airline#extensions#tmuxline#enabled = 1
+    let g:airline_theme='atomic'
     " cnoremap at AirlineTheme 
 " }
 
 " Tmuxline {
-    let g:tmuxline_preset = 'powerline'
+    let g:tmuxline_powerline_separators = 0
+    let g:tmuxline_status_justify = 'left'
+    let g:tmuxline_preset = {
+          \'a'    : '#h',
+          \'b'    : '',
+          \'c'    : '',
+          \'win'  : ['#I'],
+          \'cwin' : ['#I'],
+          \'x'    : '',
+          \'y'    : '#(source $HOME/.functions && nztime)',
+          \'z'    : '#(source $HOME/.functions && localtime)'}
 " }
 
 " Tabular {
