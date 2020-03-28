@@ -1,6 +1,29 @@
 " Pathongen {
-    execute pathogen#infect()
-    execute pathogen#helptags()
+    "execute pathogen#infect()
+    "execute pathogen#helptags()
+" }
+
+" Plug { https://github.com/junegunn/vim-plug
+    call plug#begin('~/.vim/plugged')
+      Plug 'godlygeek/csapprox'
+      "Plug 'ctrlpvim/ctrlp.vim'
+      Plug 'Raimondi/delimitMate'
+      Plug 'vim-scripts/groovy.vim'
+      Plug 'Yggdroot/indentLine'
+      Plug 'marslo/jenkinsfile-vim-syntax'
+      Plug 'preservim/nerdtree'
+      Plug 'godlygeek/tabular'
+      Plug 'edkolev/tmuxline.vim'
+      Plug 'vim-airline/vim-airline'
+      Plug 'vim-airline/vim-airline-themes'
+      "Plug 'tpope/vim-endwise'
+      "Plug 'tpope/vim-fugitive'
+      Plug 'b4b4r07/vim-hcl'
+      "Plug 'mustache/vim-mustache-handlebars'
+      Plug 'rodjek/vim-puppet'
+      Plug 'tpope/vim-rails'
+      Plug 'tpope/vim-surround'
+    call plug#end()
 " }
 
 " Common {
@@ -128,6 +151,7 @@
           \'win'  : ['#I'],
           \'cwin' : ['#I'],
           \'x'    : '',
+          \'y'    : '#(source $HOME/.functions && nztime)',
           \'z'    : '#(source $HOME/.functions && localtime)'}
 " }
 
@@ -167,8 +191,3 @@
     au BufRead,BufNewFile Releasefile set syntax=groovy
 " }
 
-" Terraform {
-    let g:terraform_align = 1
-    let g:terraform_fold_sections = 0
-    let g:terraform_fmt_on_save = 1
-" }
