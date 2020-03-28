@@ -49,7 +49,7 @@
     set t_BE=
 
     let ayucolor="dark"
-    colorscheme ayu
+    colorscheme monokain
 
     " Defining leader keys
     let mapleader = ','
@@ -137,7 +137,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 1
-    let g:airline_theme='atomic'
+    let g:airline_theme='angr'
     " cnoremap at AirlineTheme 
 " }
 
