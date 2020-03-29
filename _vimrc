@@ -189,5 +189,6 @@
     au BufRead,BufNewFile Controlfile set syntax=yaml
     au BufRead,BufNewFile Jenkinsfile set syntax=groovy
     au BufRead,BufNewFile Releasefile set syntax=groovy
+    au BufRead,BufNewFile Triggerfile set syntax=groovy
 " }
 
