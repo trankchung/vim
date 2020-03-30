@@ -151,7 +151,7 @@
           \'win'  : ['#I'],
           \'cwin' : ['#I'],
           \'x'    : '',
-          \'y'    : '#(source $HOME/.functions && nztime)',
+          \'y'    : '#(source $HOME/.functions && localdate)',
           \'z'    : '#(source $HOME/.functions && localtime)'}
 " }
 
