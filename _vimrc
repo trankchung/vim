@@ -23,6 +23,7 @@
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
+      Plug 'hashivim/vim-terraform'
     call plug#end()
 " }
 
