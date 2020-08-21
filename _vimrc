@@ -8,6 +8,7 @@
       Plug 'godlygeek/csapprox'
       "Plug 'ctrlpvim/ctrlp.vim'
       Plug 'Raimondi/delimitMate'
+      Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
       Plug 'Yggdroot/indentLine'
       Plug 'marslo/jenkinsfile-vim-syntax'
