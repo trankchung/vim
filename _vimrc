@@ -153,8 +153,8 @@
           \'win'  : ['#I'],
           \'cwin' : ['#I'],
           \'x'    : '',
-          \'y'    : '#(source $HOME/.functions && localdate)',
-          \'z'    : '#(source $HOME/.functions && localtime)'}
+          \'y'    : '#(date "+%A, %B %-d, %Y")',
+          \'z'    : '#(date "+%-I:%M %p %Z")'}
 " }
 
 " Tabular {
