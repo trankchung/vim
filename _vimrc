@@ -21,6 +21,7 @@
       "Plug 'tpope/vim-fugitive'
       Plug 'b4b4r07/vim-hcl'
       "Plug 'mustache/vim-mustache-handlebars'
+      Plug 'rakr/vim-one'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
@@ -51,7 +52,8 @@
     set t_BE=
 
     let ayucolor="light"
-    colorscheme Tomorrow
+    colorscheme onehalflight
+    set background=light
 
     " Defining leader keys
     let mapleader = ','
@@ -138,8 +140,8 @@
     set laststatus=2
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tmuxline#enabled = 1
-    let g:airline_theme='seagull'
+    let g:airline#extensions#tmuxline#enabled = 0
+    let g:airline_theme='one'
     " cnoremap at AirlineTheme 
 " }
 
