@@ -201,3 +201,8 @@
     au BufRead,BufNewFile Triggerfile set syntax=groovy
 " }
 
+" COC Intellisense Completion {
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" }
+"
