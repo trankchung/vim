@@ -7,6 +7,7 @@
     call plug#begin('~/.vim/plugged')
       Plug 'godlygeek/csapprox'
       "Plug 'ctrlpvim/ctrlp.vim'
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
       Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
@@ -21,11 +22,14 @@
       "Plug 'tpope/vim-fugitive'
       Plug 'b4b4r07/vim-hcl'
       "Plug 'mustache/vim-mustache-handlebars'
-      Plug 'rakr/vim-one'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
       Plug 'hashivim/vim-terraform'
+
+      " Colors
+      Plug 'rakr/vim-one'
+      Plug 'joshdick/onedark.vim'
     call plug#end()
 " }
 
@@ -156,8 +160,8 @@
           \'win'  : ['#I'],
           \'cwin' : ['#I'],
           \'x'    : '',
-          \'y'    : '#(date "+%A, %B %-d, %Y")',
-          \'z'    : '#(date "+%-I:%M %p %Z")'}
+          \'y'    : '#(date "+%-I:%M %p %Z")',
+          \'z'    : '#(date "+%a, %b %-d, %Y")'}
 " }
 
 " Tabular {
