@@ -40,7 +40,6 @@ let s:string        =   '#89ca78'
 
 let s:comment       =   '#737c8c'
 
-
 " Syntax highlighting groups
 call s:hi('Comment', s:comment, s:bg, s:italic)
 call s:hi('Constant', s:primary, s:bg, s:none)
@@ -60,6 +59,7 @@ call s:hi('Label', s:primary, s:bg, s:none)
 call s:hi('Operator', s:source, s:bg, s:none)
 call s:hi('Keyword', s:primary, s:bg, s:none)
 call s:hi('Exception', s:primary, s:bg, s:none)
+call s:hi("Folded", s:none, s:none, s:none)
 
 call s:hi('PreProc', s:source, s:bg, s:none)
 call s:hi('Include', s:primary, s:bg, s:none)
@@ -103,6 +103,9 @@ call s:hi('VertSplit', '#1a1a1a', s:bg, s:none)
 call s:hi('Title', s:scalar, s:bg, s:none)
 call s:hi('Pmenu', s:source, '#1a1a1a', s:none)
 call s:hi('PmenuSel', s:bg, s:source, s:none)
+call s:hi('TabLine', s:none, s:none, s:none)
+call s:hi('TabLineFill', s:none, s:none, s:none)
+call s:hi('TabLineSel', s:bg, s:string, s:none)
 
 
 " Git Gutter
@@ -169,6 +172,8 @@ call s:hi('clojureKeyword', s:source, s:bg, s:none)
 " Vimscript syntax highlighting
 call s:hi('vimOption', s:source, s:bg, s:none)
 
+" YAML
+call s:hi("Identifier", s:comment, s:none, s:none)
 
 " NERDTree
 call s:hi('NERDTreeClosable', s:string, s:bg, s:none)
@@ -182,4 +187,5 @@ if has("gui_win32")
     call s:hi('CursorLine', s:source, '#1a1a1a', s:none)
     call s:hi('Cursor', s:bg, s:string, s:none)
 endif
+
 
