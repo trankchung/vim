@@ -55,9 +55,9 @@
     set t_Co=256
     set t_BE=
 
-    let ayucolor="light"
-    colorscheme onehalflight
-    set background=light
+    let ayucolor="dark"
+    colorscheme hyper
+    set background=dark
 
     " Defining leader keys
     let mapleader = ','
@@ -145,7 +145,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='one'
+    let g:airline_theme='dark'
     " cnoremap at AirlineTheme 
 " }
 
@@ -205,4 +205,3 @@
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " }
-"
