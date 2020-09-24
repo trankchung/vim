@@ -173,7 +173,7 @@ call s:hi('clojureKeyword', s:source, s:bg, s:none)
 call s:hi('vimOption', s:source, s:bg, s:none)
 
 " YAML
-call s:hi("Identifier", s:comment, s:none, s:none)
+call s:hi("Identifier", s:string, s:none, s:none)
 
 " NERDTree
 call s:hi('NERDTreeClosable', s:string, s:bg, s:none)
