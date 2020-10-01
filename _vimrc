@@ -9,6 +9,7 @@
       "Plug 'ctrlpvim/ctrlp.vim'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
+      Plug 'dag/vim-fish'
       Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
       Plug 'Yggdroot/indentLine'
