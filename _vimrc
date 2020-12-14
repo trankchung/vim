@@ -57,7 +57,7 @@
     set t_BE=
 
     let ayucolor="light"
-    colorscheme onehalflight
+    colorscheme Tomorrow
     set background=light
 
     " Defining leader keys
