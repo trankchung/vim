@@ -206,3 +206,6 @@
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " }
+
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+
