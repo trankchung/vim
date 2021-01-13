@@ -84,6 +84,12 @@
     " Remap <leader>w to Ctrl+W. <leader>ww to switch window.
     nnoremap <leader>w <C-W>
 
+    " Map pane resizing
+    nnoremap <leader>l <c-w>5>
+    nnoremap <leader>h <c-w>5<
+    nnoremap <leader>k <c-w>5+
+    nnoremap <leader>j <c-w>5-
+
     " Map buffer navigation
     nnoremap bn :bn<CR> " next buffer
     nnoremap bp :bp<CR> " previous buffer
@@ -158,8 +164,8 @@
           \'a'    : 'ヽ(^o^)丿 ',
           \'b'    : '',
           \'c'    : '',
-          \'win'  : ['#W'],
-          \'cwin' : ['#W'],
+          \'win'  : ['#I#W'],
+          \'cwin' : ['#I#W'],
           \'x'    : '',
           \'y'    : '#(date "+%-I:%M %p %Z")',
           \'z'    : '#(date "+%a, %b %-d, %Y")'}
