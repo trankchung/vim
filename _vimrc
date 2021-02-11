@@ -95,6 +95,10 @@
     nnoremap bp :bp<CR> " previous buffer
     nnoremap bd :bd<CR> " close buffer
 
+    " Map tab moving navigation
+    nnoremap tl :tabmove +1<CR> " move tab right
+    nnoremap th :tabmove -1<CR> " move tab left
+
     " Windows navigation
     nnoremap <tab> <c-w><c-w>
     
