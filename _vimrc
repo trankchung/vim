@@ -27,6 +27,7 @@
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
       Plug 'hashivim/vim-terraform'
+      Plug 'zigford/vim-powershell'
 
       " Colors
       Plug 'rakr/vim-one'
@@ -74,6 +75,10 @@
     inoremap <leader>c <C-C>
     cnoremap <leader>c <C-C>
 
+    noremap jk <C-C>
+    inoremap jk <C-C>
+    cnoremap jk <C-C>
+
     " Edit config file
     nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
@@ -96,8 +101,8 @@
     nnoremap bd :bd<CR> " close buffer
 
     " Map tab moving navigation
-    nnoremap tl :tabmove +1<CR> " move tab right
-    nnoremap th :tabmove -1<CR> " move tab left
+    nnoremap tn :tabmove +1<CR> " move tab right
+    nnoremap tp :tabmove -1<CR> " move tab left
 
     " Windows navigation
     nnoremap <tab> <c-w><c-w>
