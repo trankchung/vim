@@ -1,12 +1,7 @@
-" Pathongen {
-    "execute pathogen#infect()
-    "execute pathogen#helptags()
-" }
-
 " Plug { https://github.com/junegunn/vim-plug
     call plug#begin('~/.vim/plugged')
       Plug 'godlygeek/csapprox'
-      "Plug 'ctrlpvim/ctrlp.vim'
+      Plug 'ctrlpvim/ctrlp.vim'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
       Plug 'dag/vim-fish'
@@ -15,23 +10,26 @@
       Plug 'Yggdroot/indentLine'
       Plug 'marslo/jenkinsfile-vim-syntax'
       Plug 'preservim/nerdtree'
+      Plug 'xuyuanp/nerdtree-git-plugin'
       Plug 'godlygeek/tabular'
       Plug 'edkolev/tmuxline.vim'
       Plug 'vim-airline/vim-airline'
       Plug 'vim-airline/vim-airline-themes'
       "Plug 'tpope/vim-endwise'
-      "Plug 'tpope/vim-fugitive'
+      Plug 'tpope/vim-fugitive'
       Plug 'b4b4r07/vim-hcl'
       "Plug 'mustache/vim-mustache-handlebars'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
+      Plug 'flazz/vim-colorschemes'
       Plug 'hashivim/vim-terraform'
       Plug 'zigford/vim-powershell'
 
       " Colors
       Plug 'rakr/vim-one'
       Plug 'joshdick/onedark.vim'
+      Plug 'morhetz/gruvbox'
     call plug#end()
 " }
 
@@ -58,7 +56,7 @@
     set t_BE=
 
     let ayucolor="light"
-    colorscheme Tomorrow
+    colorscheme tomorrow
     set background=light
 
     " Defining leader keys
@@ -170,7 +168,7 @@
     let g:tmuxline_powerline_separators = 0
     let g:tmuxline_status_justify = 'left'
     let g:tmuxline_preset = {
-          \'a'    : 'ヽ(^o^)丿 ',
+          \'a'    : 'LOCAL',
           \'b'    : '',
           \'c'    : '',
           \'win'  : ['#I#W'],
