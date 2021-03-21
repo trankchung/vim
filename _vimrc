@@ -1,7 +1,7 @@
 " Plug { https://github.com/junegunn/vim-plug
     call plug#begin('~/.vim/plugged')
       Plug 'godlygeek/csapprox'
-      "Plug 'ctrlpvim/ctrlp.vim'
+      Plug 'ctrlpvim/ctrlp.vim'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
       Plug 'dag/vim-fish'
@@ -75,9 +75,7 @@
     inoremap <leader>c <C-C>
     cnoremap <leader>c <C-C>
 
-    noremap jk <C-C>
     inoremap jk <C-C>
-    cnoremap jk <C-C>
 
     " Edit config file
     nnoremap <leader>ev :vsplit $MYVIMRC<CR>
