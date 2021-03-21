@@ -24,7 +24,7 @@
       Plug 'tpope/vim-surround'
       Plug 'flazz/vim-colorschemes'
       Plug 'ryanoasis/vim-devicons'
-      Plug 'mhinz/vim-startify'
+      "Plug 'mhinz/vim-startify'
       Plug 'hashivim/vim-terraform'
       Plug 'zigford/vim-powershell'
 
