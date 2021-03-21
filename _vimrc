@@ -1,7 +1,7 @@
 " Plug { https://github.com/junegunn/vim-plug
     call plug#begin('~/.vim/plugged')
       Plug 'godlygeek/csapprox'
-      Plug 'ctrlpvim/ctrlp.vim'
+      "Plug 'ctrlpvim/ctrlp.vim'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
       Plug 'dag/vim-fish'
@@ -16,13 +16,15 @@
       Plug 'vim-airline/vim-airline'
       Plug 'vim-airline/vim-airline-themes'
       "Plug 'tpope/vim-endwise'
-      Plug 'tpope/vim-fugitive'
+      "Plug 'tpope/vim-fugitive'
       Plug 'b4b4r07/vim-hcl'
       "Plug 'mustache/vim-mustache-handlebars'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'tpope/vim-surround'
       Plug 'flazz/vim-colorschemes'
+      Plug 'ryanoasis/vim-devicons'
+      Plug 'mhinz/vim-startify'
       Plug 'hashivim/vim-terraform'
       Plug 'zigford/vim-powershell'
 
@@ -221,4 +223,5 @@
 " }
 
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+autocmd vimenter * NERDTree
 
