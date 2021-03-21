@@ -115,10 +115,17 @@
     let NERDTreeIgnore = ['__pycache__']
     let NERDTreeWinSize = 25
 
+    autocmd vimenter * map - i
+    autocmd vimenter * map \| s
+
     nnoremap <F2> :NERDTree $HOME<CR>
     nnoremap <leader>n :NERDTreeToggle<CR>
     nnoremap <leader>t :NERDTreeToggle<CR>
     " cnoremap nt NERDTree<Space>
+
+    " Start NERDTree when Vim is started without file arguments
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " }
 
 
@@ -220,6 +227,6 @@
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " }
 
+" Transparent background
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-autocmd vimenter * NERDTree
 
