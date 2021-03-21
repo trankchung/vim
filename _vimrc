@@ -1,17 +1,20 @@
 " Plug { https://github.com/junegunn/vim-plug
     call plug#begin('~/.vim/plugged')
       Plug 'godlygeek/csapprox'
-      Plug 'ctrlpvim/ctrlp.vim'
+      "Plug 'ctrlpvim/ctrlp.vim'
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
       Plug 'dag/vim-fish'
+      Plug 'junegunn/fzf'
       Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
       Plug 'Yggdroot/indentLine'
       Plug 'marslo/jenkinsfile-vim-syntax'
+      Plug 'preservim/nerdcommenter'
       Plug 'preservim/nerdtree'
       Plug 'xuyuanp/nerdtree-git-plugin'
       Plug 'godlygeek/tabular'
+      Plug 'preservim/tagbar'
       Plug 'edkolev/tmuxline.vim'
       Plug 'vim-airline/vim-airline'
       Plug 'vim-airline/vim-airline-themes'
@@ -21,9 +24,11 @@
       "Plug 'mustache/vim-mustache-handlebars'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
+      Plug 'luochen1990/rainbow'
       Plug 'tpope/vim-surround'
       Plug 'flazz/vim-colorschemes'
       Plug 'ryanoasis/vim-devicons'
+      Plug 'airblade/vim-gitgutter'
       "Plug 'mhinz/vim-startify'
       Plug 'hashivim/vim-terraform'
       Plug 'zigford/vim-powershell'
@@ -107,27 +112,28 @@
     
     " Folding
     nnoremap <leader>fi :setlocal fdm=indent<CR>
+
+    " Movement
+    nnoremap <leader>d <C-D> " Page down using <leader>d instead of Ctrl+D.
+    nnoremap <leader>u <C-U> " Page up using <leader>u instead of Ctrl+U.
+
+    " JSON Line Format
+    nnoremap <leader>fj :python json_line_format_write()<CR>
+ 
+    " Groovy syntax highlighting
+    autocmd BufRead,BufNewFile bootstrap set syntax=groovy
+    autocmd BufRead,BufNewFile Controlfile set syntax=yaml
+    autocmd BufRead,BufNewFile Jenkinsfile set syntax=groovy
+    autocmd BufRead,BufNewFile Releasefile set syntax=groovy
+    autocmd BufRead,BufNewFile Triggerfile set syntax=groovy
+
+    " COC Intellisense Completion
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+    " Transparent background
+    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " }
-
-
-" NERDTree {
-    let NERDTreeDirArrows = 1
-    let NERDTreeIgnore = ['__pycache__']
-    let NERDTreeWinSize = 25
-
-    autocmd vimenter * map - i
-    autocmd vimenter * map \| s
-
-    nnoremap <F2> :NERDTree $HOME<CR>
-    nnoremap <leader>n :NERDTreeToggle<CR>
-    nnoremap <leader>t :NERDTreeToggle<CR>
-    " cnoremap nt NERDTree<Space>
-
-    " Start NERDTree when Vim is started without file arguments
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-" }
-
 
 " GUI {
     if has('gui_running')
@@ -149,16 +155,7 @@
       elseif has("gui_win32")
         set guifont=DejaVu_Sans_Mono_for_Powerline:h10,Consolas:h11,Courier:h10,Courier_New:h10,Andale_Mono:h10,Menlo:h10
       endif
-    else
-
     endif
-" }
-
-" Indentline {
-    set conceallevel=2
-    let g:indentLine_setConceal = 0
-    let g:indentLine_conceallevel = 2
-    let g:indentLine_char = '|'
 " }
 
 " Airline {
@@ -168,6 +165,48 @@
     let g:airline#extensions#tmuxline#enabled = 0
     let g:airline_theme='one'
     " cnoremap at AirlineTheme 
+" }
+
+" CtrlP {
+    let g:ctrlp_working_path_mode = 'ra'
+    " cnoremap cp CtrlP 
+    " nnoremap <leader>f :CtrlP<CR>
+" }
+
+" fzf {
+    nnoremap <leader>f :FZF<CR>
+" }
+
+" NERDTree {
+    let NERDTreeDirArrows = 1
+    let NERDTreeIgnore = ['__pycache__']
+    let NERDTreeWinSize = 25
+
+    autocmd vimenter * map - i
+    autocmd vimenter * map \| s
+
+    nnoremap <F2> :NERDTree $HOME<CR>
+    nnoremap <leader>n :NERDTreeToggle<CR>
+    " cnoremap nt NERDTree<Space>
+
+    " Start NERDTree when Vim is started without file arguments
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" }
+
+" Indentline {
+    set conceallevel=2
+    let g:indentLine_setConceal = 0
+    let g:indentLine_conceallevel = 2
+    let g:indentLine_char = '|'
+" }
+
+" Tabular {
+    " cnoremap tb Tabularize<Space>/
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a: :Tabularize /:<CR>
+    vmap <Leader>a: :Tabularize /:<CR>
 " }
 
 " Tmuxline {
@@ -185,48 +224,13 @@
           \'z'    : '#(date "+%a, %b %-d, %Y")'}
 " }
 
-" Tabular {
-    " cnoremap tb Tabularize<Space>/
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:<CR>
-    vmap <Leader>a: :Tabularize /:<CR>
-" }
-
-" CtrlP {
-    let g:ctrlp_working_path_mode = 'ra'
-    " cnoremap cp CtrlP 
-    nnoremap <leader>f :CtrlP<CR>
-" }
-
 " Syntastic {
     let g:syntastic_check_on_open = 1
     let g:syntastic_error_symbol = "e"
     let g:syntastic_warning_symbol = "w"
 "}
 
-" Movement Mapping {
-    nnoremap <leader>d <C-D> " Page down using <leader>d instead of Ctrl+D.
-    nnoremap <leader>u <C-U> " Page up using <leader>u instead of Ctrl+U.
+" TagBar {
+    nnoremap <leader>t :TagbarToggle<CR>
 " }
-
-" JSON Line Format {
-    nnoremap <leader>fj :python json_line_format_write()<CR>
-" }
- 
-" Groovy syntax highlighting {
-    au BufRead,BufNewFile bootstrap set syntax=groovy
-    au BufRead,BufNewFile Controlfile set syntax=yaml
-    au BufRead,BufNewFile Jenkinsfile set syntax=groovy
-    au BufRead,BufNewFile Releasefile set syntax=groovy
-    au BufRead,BufNewFile Triggerfile set syntax=groovy
-" }
-
-" COC Intellisense Completion {
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" }
-
-" Transparent background
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 

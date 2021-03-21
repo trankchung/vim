@@ -17,6 +17,7 @@ let s:aqua = "3e999f"
 let s:blue = "4271ae"
 let s:purple = "8959a8"
 let s:window = "efefef"
+let s:black = "000000"
 
 set background=light
 hi clear
@@ -253,6 +254,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("MatchParen", "", s:selection, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
+	call <SID>X("SignColumn", "", s:background, "")
+	call <SID>X("GitGutterAdd", s:green, s:background, "")
+	call <SID>X("GitGutterDelete", s:red, s:background, "")
+	call <SID>X("GitGutterChange", s:purple, s:background, "")
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
