@@ -61,10 +61,12 @@
     set nobackup
     set t_Co=256
     set t_BE=
+    set wildmode=longest,list
 
     let ayucolor="light"
-    colorscheme tomorrow
-    set background=light
+    let g:gruvbox_sign_column="bg0"
+    colorscheme gruvbox
+    set background=dark
 
     " Defining leader keys
     let mapleader = ','
@@ -109,6 +111,11 @@
 
     " Windows navigation
     nnoremap <tab> <c-w><c-w>
+    nnoremap gh <c-w>h
+    nnoremap gl <c-w>l
+    nnoremap gk <c-w>k
+    nnoremap gj <c-w>j
+    nnoremap gn <c-w>h<c-w>h<c-w>h<c-w>h<c-w>h
     
     " Folding
     nnoremap <leader>fi :setlocal fdm=indent<CR>
@@ -127,7 +134,8 @@
     autocmd BufRead,BufNewFile Releasefile set syntax=groovy
     autocmd BufRead,BufNewFile Triggerfile set syntax=groovy
 
-    " COC Intellisense Completion
+    " COC
+    let g:coc_disable_startup_warning = 1
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
@@ -223,6 +231,7 @@
           \'y'    : '#(date "+%-I:%M %p %Z")',
           \'z'    : '#(date "+%a, %b %-d, %Y")'}
 " }
+
 
 " Syntastic {
     let g:syntastic_check_on_open = 1
