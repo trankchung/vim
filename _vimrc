@@ -65,8 +65,8 @@
 
     let ayucolor="light"
     let g:gruvbox_sign_column="bg0"
-    colorscheme gruvbox
-    set background=dark
+    colorscheme tomorrow
+    set background=light
 
     " Defining leader keys
     let mapleader = ','
@@ -171,7 +171,7 @@
     let g:airline#extensions#tabline#enabled = 0
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='one'
+    let g:airline_theme='biogoo'
     " cnoremap at AirlineTheme 
 " }
 
