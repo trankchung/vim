@@ -37,6 +37,7 @@
       Plug 'rakr/vim-one'
       Plug 'joshdick/onedark.vim'
       Plug 'morhetz/gruvbox'
+      Plug 'ashfinal/vim-colors-paper'
     call plug#end()
 " }
 
@@ -65,7 +66,7 @@
 
     let ayucolor="light"
     let g:gruvbox_sign_column="bg0"
-    colorscheme tomorrow
+    colorscheme paper
     set background=light
 
     " Defining leader keys
@@ -168,11 +169,12 @@
 
 " Airline {
     set laststatus=2
-    let g:airline#extensions#tabline#enabled = 0
-    let g:airline_powerline_fonts = 1
+    let g:airline_theme='cool'
+    let g:airline_powerline_fonts = 0
     let g:airline#extensions#tmuxline#enabled = 0
-    let g:airline_theme='biogoo'
-    " cnoremap at AirlineTheme 
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#left_alt_sep = '|'
+    cnoremap alt AirlineTheme 
 " }
 
 " CtrlP {
