@@ -9,6 +9,7 @@
       Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
       Plug 'Yggdroot/indentLine'
+      Plug 'davidhalter/jedi-vim'
       Plug 'marslo/jenkinsfile-vim-syntax'
       Plug 'preservim/nerdcommenter'
       Plug 'preservim/nerdtree'
@@ -195,7 +196,7 @@
     autocmd vimenter * map - i
     autocmd vimenter * map \| s
 
-    nnoremap <F2> :NERDTree $HOME<CR>
+    nnoremap <leader>e :NERDTreeToggle<CR>
     nnoremap <leader>n :NERDTreeToggle<CR>
     " cnoremap nt NERDTree<Space>
 
@@ -245,3 +246,11 @@
     nnoremap <leader>t :TagbarToggle<CR>
 " }
 
+" jedi-vim {
+  " No docstring preview
+  autocmd FileType python setlocal completeopt-=preview
+  " No autotrigger. C-Space to trigger.
+  let g:jedi#popup_on_dot = 0
+  let g:jedi#usages_command = ""
+  let g:jedi#show_call_signatures = "1"
+" }
