@@ -1,12 +1,10 @@
 " Plug { https://github.com/junegunn/vim-plug
     call plug#begin('~/.vim/plugged')
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'godlygeek/csapprox'
       "Plug 'ctrlpvim/ctrlp.vim'
-      Plug 'neoclide/coc.nvim', {'branch': 'release'}
       Plug 'Raimondi/delimitMate'
-      Plug 'dag/vim-fish'
       Plug 'junegunn/fzf'
-      Plug 'fatih/vim-go'
       Plug 'vim-scripts/groovy.vim'
       Plug 'Yggdroot/indentLine'
       Plug 'davidhalter/jedi-vim'
@@ -19,26 +17,28 @@
       Plug 'edkolev/tmuxline.vim'
       Plug 'vim-airline/vim-airline'
       Plug 'vim-airline/vim-airline-themes'
+      Plug 'flazz/vim-colorschemes'
+      Plug 'ryanoasis/vim-devicons'
       "Plug 'tpope/vim-endwise'
+      Plug 'dag/vim-fish'
       "Plug 'tpope/vim-fugitive'
-      Plug 'b4b4r07/vim-hcl'
+      Plug 'airblade/vim-gitgutter'
+      Plug 'fatih/vim-go'
+      "Plug 'b4b4r07/vim-hcl'
       "Plug 'mustache/vim-mustache-handlebars'
       Plug 'rodjek/vim-puppet'
       Plug 'tpope/vim-rails'
       Plug 'luochen1990/rainbow'
       Plug 'tpope/vim-surround'
-      Plug 'flazz/vim-colorschemes'
-      Plug 'ryanoasis/vim-devicons'
-      Plug 'airblade/vim-gitgutter'
       "Plug 'mhinz/vim-startify'
       Plug 'hashivim/vim-terraform'
       Plug 'zigford/vim-powershell'
 
       " Colors
-      Plug 'rakr/vim-one'
-      Plug 'joshdick/onedark.vim'
       Plug 'morhetz/gruvbox'
+      Plug 'joshdick/onedark.vim'
       Plug 'ashfinal/vim-colors-paper'
+      Plug 'rakr/vim-one'
     call plug#end()
 " }
 
@@ -252,5 +252,12 @@
   " No autotrigger. C-Space to trigger.
   let g:jedi#popup_on_dot = 0
   let g:jedi#usages_command = ""
-  let g:jedi#show_call_signatures = "1"
+  let g:jedi#show_call_signatures = "0"
 " }
+
+" Terraform {
+  autocmd BufRead,BufNewFile *.hcl set filetype=terraform
+  let g:terraform_align=1
+  let g:terraform_fmt_on_save=1
+" }
+
